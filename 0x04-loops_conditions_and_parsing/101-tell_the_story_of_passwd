@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This file is about etc/passwd and seperating its content
 
-for i in $(less /etc/passwd)
+for i in $(cat /etc/passwd)
 do
 	first=$(echo "$i" | cut -d ":" -f1)
 	second=$(echo "$i" | cut -d ":" -f2)
