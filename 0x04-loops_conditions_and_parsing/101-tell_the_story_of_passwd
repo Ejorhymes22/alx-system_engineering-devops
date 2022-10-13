@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This file is about etc/passwd and seperating its content
+
+for i in $(less /etc/passwd)
+do
+	first=$(echo "$i" | cut -d ":" -f1)
+	second=$(echo "$i" | cut -d ":" -f2)
+	third=$(echo "$i" | cut -d ":" -f3)
+	forth=$(echo "$i" | cut -d ":" -f4)
+	fifth=$(echo "$i" | cut -d ":" -f5)
+	sixth=$(echo "$i" | cut -d ":" -f6)
+	seven=$(echo "$i" | cut -d ":" -f7)
+	echo "The user $first is part of the $forth gang, lives in $sixth and rides $seven. $third's place is protected by the passcode $second, more info about the user here: $fifth"
+done

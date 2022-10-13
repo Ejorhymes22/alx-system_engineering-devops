@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# This is a script on clock display
+
+x=0
+while [ $x -lt 13 ]
+do
+	echo "Hour: $x"
+	y=0
+	while [ $y -lt 60 ]
+	do
+		echo "$y"
+		(( y++ ))
+	done
+	(( x++))
+done

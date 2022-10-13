@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script prints with a while loop
+
+x=10
+while [ $x -gt 0 ]
+do
+	echo "Best School"
+	x=$(( x - 1 ))
+done
