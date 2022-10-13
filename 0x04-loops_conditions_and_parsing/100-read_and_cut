@@ -3,7 +3,7 @@
 
 lists=$(cat /etc/passwd | cut -d ':' -f1,3,6)
 
-for i in $lists
+while read -r line;
 do
-	echo "$i"
-done
+	echo "$line"
+done < "$lists"
