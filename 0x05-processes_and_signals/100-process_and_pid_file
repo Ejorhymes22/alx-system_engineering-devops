@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# This scripts a file display indefinitely
+# kills when SIGTERM, SIGINT and deletes
+
+echo "$$" > /var/run/myscript.pid
+
+trap sigi SIGINT
+trap sigt SIGTERM SIGQUIT
+
+sigt()
+{
+	echo "I hate the kill command"
+	rm /var/run/myscript.pid
+	exit;
+}
+
+sigi()
+{
+	echo "Y U no love me?!"
+}
+
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
