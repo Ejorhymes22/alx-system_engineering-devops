@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This scipt lists of currently running processes
 
-ps -eu
+ps -euxf
