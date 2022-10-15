@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
-# Displays to infinity and beyond indefinitely
+#dispalys
+
+trap sig SIGTERM
+
+sig()
+{
+	echo "I am invincible!!!"
+}
 
 while true
 do

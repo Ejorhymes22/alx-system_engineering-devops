@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This stops 4-to_iinfinity and beyond process
+
+pkill -f "7-highlander"
