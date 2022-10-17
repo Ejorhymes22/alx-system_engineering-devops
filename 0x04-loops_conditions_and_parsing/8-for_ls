@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # This is about listing file names
 
+# shellcheck disable=SC2012
 lists="$(ls | cut -d '-' -f2)"
 for f in $lists
 do
