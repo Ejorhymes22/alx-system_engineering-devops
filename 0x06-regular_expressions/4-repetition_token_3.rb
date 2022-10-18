@@ -4,7 +4,7 @@
 
 arg=ARGV[0]
 
-lists = arg.scan(/hbt{0,4}n/)
+lists = arg.scan(/hbt*n/)
 for list in lists do
   print list
 end
