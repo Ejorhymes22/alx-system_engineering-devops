@@ -8,5 +8,5 @@ then
 fi
 if [ "$(grep -c "facebook.com" /etc/hosts)" -eq 0 ]
 then
-	echo "8.8.8.8 facebook.com" > /etc/hosts
+	echo "8.8.8.8 facebook.com" >> /etc/hosts
 fi
