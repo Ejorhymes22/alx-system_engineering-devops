@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This displays all active ipv4 ips
+
+grep -E "[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+" /etc/hosts | cut -d $'\t' -f1
