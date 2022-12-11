@@ -1,0 +1,4 @@
+#configured config
+match all
+PasswordAuthentication no
+IdentityFile ~/.ssh/school

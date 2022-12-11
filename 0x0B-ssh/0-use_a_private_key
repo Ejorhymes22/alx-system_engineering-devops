@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# opens ssh
+ssh -i ~/.ssh/school ubuntu@54.210.85.166
