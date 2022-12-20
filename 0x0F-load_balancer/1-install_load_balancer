@@ -2,6 +2,7 @@
 # configures a new ubuntu machine
 sudo apt update
 sudo apt upgrade -y
+echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
 sudo apt install software-properties-common
 sudo add-apt-repository ppa:vbernat/haproxy-2.6 -y
 sudo apt update$ sudo apt install haproxy -y
