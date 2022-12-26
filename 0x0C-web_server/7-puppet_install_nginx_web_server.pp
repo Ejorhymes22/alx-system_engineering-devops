@@ -1,7 +1,17 @@
-# this install nginx using pupet
+# this install nginx using puppet
 
-include nginx
+exec { 'apt-get update':
+  path => ['/bin', '/usr/bin']
+}
 
+package { 'nginx':
+  provider        => apt,
+  install_options => ['-y'],
+}
+
+#package { 'nginx':
+#ensure => 'installed'
+#}
 
 #file { '/var/www/html/index.html':
 #content => 'Hello World!'
