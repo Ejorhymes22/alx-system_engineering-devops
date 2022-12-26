@@ -32,8 +32,9 @@ file { '/var/www/html/index.html':
 }
 
 
-exec { "sed -i '50 i rewrite ^/redirect_me/$ 301 permanent;' /etc/nginx/sites-available/default'":
-  path => ['/bin', '/usr/bin'],
+exec { 'modify_file':
+command => "sed -i '50 i rewrite ^/redirect_me/$ 301 permanent;' /etc/nginx/sites-available/default",
+path    => ['/bin'],
 }
 
 
