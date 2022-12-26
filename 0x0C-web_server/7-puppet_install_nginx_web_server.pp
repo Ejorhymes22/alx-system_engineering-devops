@@ -2,8 +2,8 @@
 package { 'apt-get update':
 }
 package { 'nginx':
-ensure 		=> present,
-provider 	=> apt,
+ensure          => present,
+provider        => apt,
 install_options => ['-y']
 }
 
