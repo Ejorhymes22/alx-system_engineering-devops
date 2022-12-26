@@ -1,3 +1,4 @@
+# configures config file
 file { 'config':
 ensure  => file,
 path    => '/.ssh/',
