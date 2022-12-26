@@ -1,5 +1,5 @@
 file { 'config':
-	path => '/.ssh/',
-	ensure => file,
-	content => 'match all\nPasswordAuthentication no\nIdentityFile ~/.ssh/school'
+ensure  => file,
+path    => '/.ssh/',
+content => 'match all\nPasswordAuthentication no\nIdentityFile ~/.ssh/school'
 }
