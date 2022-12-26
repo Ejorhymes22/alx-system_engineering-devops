@@ -1,6 +1,10 @@
 # this install nginx using pupet
+package { 'apt-get update':
+}
 package { 'nginx':
-ensure => present
+ensure 		=> present,
+provider 	=> apt,
+install_options => ['-y']
 }
 
 file { '/var/www/html/index.html':
