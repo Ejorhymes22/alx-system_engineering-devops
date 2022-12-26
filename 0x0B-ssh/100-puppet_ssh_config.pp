@@ -1,5 +1,5 @@
 # configures config file
-file { '/etc/ssh/ssh_config':
+file { '/.ssh/config':
 content => '#ssh client configuration
 Match all
 PasswordAuthentication no
