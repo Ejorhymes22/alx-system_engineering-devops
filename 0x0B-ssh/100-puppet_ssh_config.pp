@@ -1,6 +1,5 @@
 # configures config file
-file { 'config':
-ensure  => file,
-path    => '/.ssh/',
-content => 'match all\nPasswordAuthentication no\nIdentityFile ~/.ssh/school'
+file { 'ssh_config':
+path    => '/etc/ssh/',
+content => '#ssh client configuration\nMatch all\nPasswordAuthentication no\nIdentityFile ~/.ssh/school',
 }
