@@ -1,7 +1,7 @@
 # this install nginx using puppet
 
 exec { 'apt-get update':
-  path => ['/bin', '/usr/bin']
+  path => ['/bin', '/usr/bin'],
 }
 
 package { 'nginx':
@@ -13,9 +13,9 @@ package { 'nginx':
 #ensure => 'installed'
 #}
 
-#file { '/var/www/html/index.html':
-#content => 'Hello World!'
-#}
+file { '/var/www/html/index.html':
+content => 'Hello World!'
+}
 
 #exec { "sed -i '50 i rewrite ^/redirect_me/$ 301 permanent;' /etc/nginx/sites-available/default'":
 #}
