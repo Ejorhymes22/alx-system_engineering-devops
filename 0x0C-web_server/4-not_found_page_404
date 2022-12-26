@@ -19,6 +19,7 @@ server {
 	location / {
 
 		try_files \$uri \$uri/ =404;
+	}
 }" | sudo tee /etc/nginx/sites-available/default
 
 sed -i '5 i rewrite ^/redirect_me/$ 301 permanent;' /etc/nginx/sites-available/default
